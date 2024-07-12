@@ -10,9 +10,6 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useEffect, useState } from "react";
-// import { Feather } from "@expo/vector-icons";
-// import * as Location from "expo-location";
-// import { MaterialIcons } from "@expo/vector-icons";
 import Carousel from "../components/CarouselView";
 import Services from "../components/Services";
 import DressItem from "../components/DressItem";
@@ -173,7 +170,6 @@ const HomeScreen = () => {
         >
           <MaterialIcons name="location-pin" size={30} color="red" />
 
-          {/* <MaterialIcons name="location-on" size={30} color="#fd5c63" /> */}
           <View>
             <Text style={{ fontSize: 18, fontWeight: "600", color: '#000' }}>Home</Text>
             <Text style={{ color: '#000' }}>{displayCurrentAddress}</Text>
@@ -203,7 +199,6 @@ const HomeScreen = () => {
           }}
         >
           <TextInput style={{ color: '#000' }} placeholderTextColor={"#000"} placeholder="Search for items or More" />
-          {/* <Feather name="search" size={24} color="#fd5c63" /> */}
           <MaterialIcons name="search" size={24} color="red" />
         </View>
 

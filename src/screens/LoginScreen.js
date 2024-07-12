@@ -9,9 +9,7 @@ import {
   ActivityIndicator,
   Alert
 } from "react-native";
-// import { Ionicons } from "@expo/vector-icons";
 import React, { useEffect, useState } from "react";
-// import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
@@ -141,7 +139,6 @@ const LoginScreen = () => {
             </View>
 
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              {/* <Ionicons name="key-outline" size={24} color="black" /> */}
               <MaterialIcons name="vpn-key" size={24} color="black" />
               <TextInput
                 value={password}

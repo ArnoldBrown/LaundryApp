@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { Ionicons } from "@expo/vector-icons";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import {
   cleanCart,
@@ -19,6 +18,7 @@ import { decrementQty, incrementQty } from "../redux/ProductReducer";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import { COLOR } from "../theme/typography";
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const CartScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -59,12 +59,7 @@ const CartScreen = () => {
                 alignItems: "center",
               }}
             >
-              {/* <Ionicons
-                onPress={() => navigation.goBack()}
-                name="arrow-back"
-                size={24}
-                color="black"
-              /> */}
+              <MaterialIcons onPress={() => navigation.goBack()} name="arrow-back" size={24} color="black" />
               <Text style={{color:'#000' }}>Your Bucket</Text>
             </View>
 
