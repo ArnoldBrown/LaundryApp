@@ -48,8 +48,9 @@ const LoginScreen = () => {
   };
 
   const login = () => {
-
+    setLoading(true);
     if (email === "" || password === "") {
+      setLoading(false);
       Alert.alert(
         "Invalid Credentials!",
         "Please fill all the details",
@@ -67,6 +68,7 @@ const LoginScreen = () => {
 
     if (email !== "" || password !== "") {
       const emailValidation = validateEmail(email);
+      setLoading(false);
       if (!emailValidation.valid) {
         Alert.alert('Validation Error', emailValidation.message);
         return;
@@ -77,6 +79,7 @@ const LoginScreen = () => {
       console.log("user credential", userCredential);
       const user = userCredential.user;
       console.log("user details", user)
+      setLoading(false);
     })
   }
 

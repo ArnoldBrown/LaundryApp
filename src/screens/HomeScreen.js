@@ -22,6 +22,7 @@ import { useNavigation } from "@react-navigation/native";
 import { collection, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { COLOR } from "../theme/typography";
 
 const HomeScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -223,7 +224,7 @@ const HomeScreen = () => {
       ) : (
         <Pressable
           style={{
-            backgroundColor: "#088F8F",
+            backgroundColor: COLOR.PRIMARY,
             padding: 10,
             marginBottom: 40,
             margin: 15,

@@ -18,6 +18,7 @@ import {
 import { decrementQty, incrementQty } from "../redux/ProductReducer";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../firebase";
+import { COLOR } from "../theme/typography";
 
 const CartScreen = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -111,7 +112,7 @@ const CartScreen = () => {
                       <Text
                         style={{
                           fontSize: 20,
-                          color: "#088F8F",
+                          color: COLOR.PRIMARY,
                           paddingHorizontal: 6,
                           fontWeight: "600",
                         }}
@@ -124,7 +125,7 @@ const CartScreen = () => {
                       <Text
                         style={{
                           fontSize: 19,
-                          color: "#088F8F",
+                          color: COLOR.PRIMARY,
                           paddingHorizontal: 8,
                           fontWeight: "600",
                         }}
@@ -142,7 +143,7 @@ const CartScreen = () => {
                       <Text
                         style={{
                           fontSize: 20,
-                          color: "#088F8F",
+                          color: COLOR.PRIMARY,
                           paddingHorizontal: 6,
                           fontWeight: "600",
                         }}
@@ -205,7 +206,7 @@ const CartScreen = () => {
                     style={{
                       fontSize: 18,
                       fontWeight: "400",
-                      color: "#088F8F",
+                      color: COLOR.PRIMARY,
                     }}
                   >
                     FREE
@@ -240,13 +241,13 @@ const CartScreen = () => {
                   <Text
                     style={{ fontSize: 18, fontWeight: "500", color: "gray" }}
                   >
-                    selected Date
+                    Selected Date
                   </Text>
                   <Text
                     style={{
                       fontSize: 18,
                       fontWeight: "400",
-                      color: "#088F8F",
+                      color: COLOR.PRIMARY,
                     }}
                   >
                     {/* {route.params.pickUpDate} */}
@@ -270,7 +271,7 @@ const CartScreen = () => {
                     style={{
                       fontSize: 18,
                       fontWeight: "400",
-                      color: "#088F8F",
+                      color: COLOR.PRIMARY,
                     }}
                   >
                     {route.params.no_Of_days}
@@ -288,14 +289,14 @@ const CartScreen = () => {
                   <Text
                     style={{ fontSize: 18, fontWeight: "500", color: "gray" }}
                   >
-                    selected Pick Up Time
+                    Selected Pick Up Time
                   </Text>
 
                   <Text
                     style={{
                       fontSize: 18,
                       fontWeight: "400",
-                      color: "#088F8F",
+                      color: COLOR.PRIMARY,
                     }}
                   >
                     {route.params.selectedTime}
@@ -334,7 +335,7 @@ const CartScreen = () => {
       {total === 0 ? null : (
         <Pressable
           style={{
-            backgroundColor: "#088F8F",
+            backgroundColor: COLOR.PRIMARY,
             marginTop: "auto",
             padding: 10,
             marginBottom: 40,

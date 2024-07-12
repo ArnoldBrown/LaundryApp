@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import HorizontalDatepicker from "@awrminkhodaei/react-native-horizontal-datepicker";
 import { useSelector } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
+import { COLOR } from "../theme/typography";
 
 const PickUpScreen = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -202,7 +203,7 @@ const PickUpScreen = () => {
       {total === 0 ? null : (
         <Pressable
           style={{
-            backgroundColor: "#088F8F",
+            backgroundColor: COLOR.PRIMARY,
             marginTop:"auto",
             padding: 10,
             marginBottom: 40,
